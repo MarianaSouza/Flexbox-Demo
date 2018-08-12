@@ -1,19 +1,64 @@
+html, body {
+	background-color: #ffeead;
+	margin: 10px;
+}
+
 .container {
-  border: 5px solid #ffcc5c;
-  display: flex;
+	font-size: 20px;
+	font-family: 'Verdana';
+	border: 5px solid #ffcc5c;
+	display: flex;
+	padding: 0;
 }
 
-.search {
-  flex: 1;
+.container > li {
+	padding: 10px;
+	text-align: center;
+	color: #ffeead;
+	box-sizing: border-box;
+	background-color: #96ceb4;
+	list-style-type: none;
 }
 
-@media all and (max-width: 600px){
-	.container{
+.search{
+
+	/* the flex property allows you to set the width item according to the container*/
+	/* it is a shorthand for 3 properties: flex-grow, flex-shrink, and flex-basis*/
+	flex: 1;
+}
+
+.search-input {
+	background: #ff6e68;
+	border: 0;
+	width: 100%;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid #ffeead;
+	color: #ffeead;
+	font-size: 14px;
+}
+
+::placeholder {
+	color: #ffeead;
+}
+
+.search-input:focus {
+	outline: none;
+}
+
+.container > li {
+	background-color: #96ceb4;
+}
+
+@media all and (max-width:600px) {
+	.container {
+
 		/* wrap enclose the container allowing the content to break in a second row*/ 
 		flex-wrap: wrap;
 	}
 
-	.container > li{
+	.container > li {
+
 		/* flex grow 1, shrink 1 and basis (width) 50%*/
 		flex: 1 1 50%;
 	}
@@ -21,16 +66,18 @@
 	.search >input {
 		text-align: center;
 	}
+
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width:400px) {
+	.container > li {
 
-	.container > li{
 		/* flex grow 1, shrink 1 and basis (width) 100%*/
 		flex: 1 1 50%;
 	}
 
-	.search{
+	.search {
+
 		/* order goes from -x to +x, so the last element will the greatest one 
 		considering that, by default, order is 0. So, in this case, search will be the last element */
 		order: 1;
