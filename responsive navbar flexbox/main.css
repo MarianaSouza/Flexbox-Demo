@@ -1,0 +1,39 @@
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+.search {
+  flex: 1;
+}
+
+@media all and (max-width: 600px){
+	.container{
+		/* wrap enclose the container allowing the content to break in a second row*/ 
+		flex-wrap: wrap;
+	}
+
+	.container > li{
+		/* flex grow 1, shrink 1 and basis (width) 50%*/
+		flex: 1 1 50%;
+	}
+
+	.search >input {
+		text-align: center;
+	}
+}
+
+@media all and (max-width: 400px){
+
+	.container > li{
+		/* flex grow 1, shrink 1 and basis (width) 100%*/
+		flex: 1 1 50%;
+	}
+
+	.search{
+		/* order goes from -x to +x, so the last element will the greatest one 
+		considering that, by default, order is 0. So, in this case, search will be the last element */
+		order: 1;
+	}
+
+}
