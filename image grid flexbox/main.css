@@ -1,0 +1,27 @@
+html, body {
+    background-color: #ffeead;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    /* wrap makes the images to behave like a gallery not standing just in one line */
+    flex-wrap: wrap;
+}
+
+.container > div > img {
+    width: 100%;
+    height:50%;
+    /* object-fit cover makes images cover the screen and to adapt to its width preventing streching*/
+    object-fit: cover;
+}
+
+.container > .normal{
+	/* flex grow 1, shrink 1 and basis (width) 200px*/
+	flex: 1 1 150px;
+}
+
+.container > .big{
+	/* flex grow 1, shrink 1 and basis (width) 200px*/
+	flex: 1 1 450px;
+}
