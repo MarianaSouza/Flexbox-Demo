@@ -5,13 +5,16 @@ body {
 html, body {
   box-sizing: border-box;
   height: 100%;
-  width: 100%;
   padding: 10px;
   background-color: #ffeead;
 }
 
 .container {
   border: 5px solid #ffcc5c;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
   /* wrap enclose the container allowing the content to break in a second row*/ 
@@ -24,7 +27,7 @@ html, body {
   font-size: 2em;
   color: #ffeead;
   /* the flex property allows you to set the width item according to the container*/
-  /* it is a shorthand for 3 properties: flex-grow, flex-shrink, and flex-basis*/
+  /* it is a shorthand for 3 properties: flex-grow (1), flex-shrink (1), and flex-basis (0)*/
   flex: 1;
 }
 
