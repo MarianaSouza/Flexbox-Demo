@@ -59,7 +59,7 @@ html, body {
 
 	.container > li {
 
-		/* flex grow 1, shrink 1 and basis (width) 50%*/
+		/* flex grow 1, shrink 1 and basis (length) 50%*/
 		flex: 1 1 50%;
 	}
 
@@ -72,7 +72,7 @@ html, body {
 @media all and (max-width:400px) {
 	.container > li {
 
-		/* flex grow 1, shrink 1 and basis (width) 100%*/
+		/* flex grow 1, shrink 1 and basis (length) 50%*/
 		flex: 1 1 50%;
 	}
 
