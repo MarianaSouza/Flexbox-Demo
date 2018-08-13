@@ -22,4 +22,5 @@
 The projects were made based on the following tutorials:
 
 https://scrimba.com/g/gflexbox
+
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
